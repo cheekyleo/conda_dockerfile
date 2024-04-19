@@ -38,7 +38,7 @@ WORKDIR /home/conda
 
 USER ${NB_UID}
 
-RUN conda install nvidia/label/cuda-12.4.1::cuda-toolkit --yes
+RUN conda install psi4 python=3.12 -c conda-forge 
 
 ENTRYPOINT ["tini", "--"]
 CMD [ "/bin/bash" ]
