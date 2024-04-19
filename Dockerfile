@@ -40,11 +40,5 @@ USER ${NB_UID}
 
 RUN conda install nvidia/label/cuda-12.4.1::cuda-toolkit --yes
 
-RUN pip install dask-cudf-cu12==24.2.2 --extra-index-url=https://pypi.nvidia.com
-
-RUN conda install r-essentials
-
-RUN pip install dask-cuda
-
 ENTRYPOINT ["tini", "--"]
 CMD [ "/bin/bash" ]
